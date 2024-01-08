@@ -19,7 +19,8 @@ const SliderForm = () => {
     e.preventDefault();
     try {
       // Gửi dữ liệu lên server
-      await axios.post('http://localhost:4000/api/data', sliderValues);
+     // await axios.post('http://localhost:4000/api/data', sliderValues);
+      await axios.post('https://ap-southeast-1.aws.data.mongodb-api.com/app/application-0-zsywh/endpoint/person', sliderValues);
       console.log('Data sent to MongoDB:', sliderValues);
     } catch (error) {
       console.error('Error sending data:', error);
